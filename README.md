@@ -1,16 +1,47 @@
-# React + Vite
+# 🎴 Disney Memory Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A stylish **React + Vite** memory game inspired by Disney characters.  
+Players test their memory across multiple levels and difficulties — with animated card flips, glowing UI, and dynamic Disney-themed visuals.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- 🧠 **Level system** — different card counts per difficulty
+- ✨ **Flip animation** — smooth 3D card rotation with Disney back design
+- 🎨 **Dynamic UI** — glowing text, gradients, and smooth transitions
+- 🎴 **Randomized characters** fetched from the [Disney API](https://disneyapi.dev)
+- 💥 **Level-up & game-over modals** with animations and themed visuals
+- 🧩 **Fully responsive** and touch-friendly
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🕹️ Gameplay
+| Difficulty | Levels | Cards in Play | Cards Displayed |
+|-------------|---------|----------------|----------------|
+| Easy | 3 | 4 → 5 → 7 | 4 |
+| Medium | 4 | 7 → 8 → 10 → 12 | 6 |
+| Hard | 5 | 10 → 12 → 13 → 14 → 16 | 8 |
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **React + Vite**
+- **Tailwind CSS**
+- **PostCSS**
+- **Disney API** for live character data
+
+---
+
+## 🧑‍💻 Setup
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/yourusername/disney-memory-game.git
+   cd disney-memory-game
+
+2. Install dependencies:
+   ```bash
+    npm install
+   
+3. Run locally:
+    ```bash
+    npm run dev

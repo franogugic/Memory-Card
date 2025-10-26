@@ -6,3 +6,5 @@ export default defineConfig({
     tailwindcss(),
   ],
 })
+git add .
+    git commit -m "✨ Add flip animation, level system, and Disney-themed UI polish with background rendering fix"

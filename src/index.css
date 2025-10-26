@@ -1,12 +1,168 @@
 @import "tailwindcss";
 
-@keyframes softPulse {
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Luckiest Guy', cursive, sans-serif !important;
+}
+
+body {
+    font-family: 'Luckiest Guy', cursive, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+
+.perspective {
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.rotate-y-180 {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+@keyframes globalGlow {
+    0% { text-shadow: 0 0 0px #fff, 0 0 0px #aee9ff; }
+    50% { text-shadow: 0 0 2px #fff, 0 0 6px #aee9ff; }
+    100% { text-shadow: 0 0 4px #fff, 0 0 10px #aee9ff; }
+}
+
+.global-softglow {
+    animation: globalGlow 3s ease-in-out infinite;
+}
+
+.shine::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    animation: shineMove 4s infinite;
+}
+
+@keyframes shineMove {
+    0% { left: -75%; }
+    60% { left: 125%; }
+    100% { left: 125%; }
+}
+
+@keyframes fadein {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadein {
+    animation: fadein 0.3s ease-out;
+}
+
+.card {
+    width: 140px;
+    height: 200px;
+}
+
+@media (max-width: 1024px) {
+    .card { width: 120px; height: 170px; }
+}
+
+@media (max-width: 768px) {
+    .card { width: 100px; height: 150px; }
+    h1 { font-size: 48px !important; }
+}
+
+body {
+    overflow: hidden;
+    background-color: black;
+    font-family: 'Luckiest Guy', cursive !important;
+}
+
+h1, p, button {
+    font-family: 'Luckiest Guy', cursive !important;
+}
+
+h1, .title-sharp {
+    font-family: 'Luckiest Guy', cursive !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+    transform: translateZ(0);
+}
+
+html, body, #root {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+@keyframes pulseGlow {
     0%, 100% {
-        transform: scale(1);
+        filter: drop-shadow(0 0 5px #00bfff) drop-shadow(0 0 10px #00bfff);
         opacity: 1;
     }
     50% {
-        transform: scale(1.04);
-        opacity: 0.95;
+        filter: drop-shadow(0 0 15px #00bfff) drop-shadow(0 0 25px #00bfff);
+        opacity: 0.7;
     }
 }
+
+.animate-pulse-glow {
+    animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.delay-0 {
+    animation-delay: 0s;
+}
+.delay-150 {
+    animation-delay: 0.15s;
+}
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fadein {
+    animation: fadein 0.5s ease-in-out;
+}
+
+
