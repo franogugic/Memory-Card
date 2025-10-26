@@ -217,11 +217,6 @@ function App() {
 
             {playerData.difficulty === "" ? (
                 <div className="relative z-10 text-white p-10 flex flex-col items-center justify-center text-center">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Disney_wordmark.svg"
-                        alt="Disney logo"
-                        className="invert brightness-0 w-[320px]"
-                    />
                     <h1
                         className="text-[90px] text-center py-12 font-[Luckiest_Guy] leading-[1.1]"
                         style={{
